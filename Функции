@@ -1,0 +1,47 @@
+Industrial College
+1
+ DELIMITER //
+ create function func1(format_date date) returns varchar(50)
+ begin
+ declare y int;
+ declare m int;
+ declare d int;
+ declare res varchar(50);
+ set y = year(format_date);
+ set m = month(format_date);
+ set d = day(format_date);
+ set res = concat(d,'.',m,'.',y);
+ return res;
+ end //
+ DELIMITER ; 
+
+2
+   drop function func2;
+   DELIMITER // 
+   create function func2() returns varchar(50)
+   begin
+   set @amount = (select COUNT(student.fio)  from student join s_kolleges on student.Kod_uz = s_kolleges.Kod_uz where s_kolleges.Name_Kollege = "Индустриальный колледж" and student.fio like "П%");
+   return @amount;
+   end 
+   DELIMITER ;
+   select func2();
+3 
+ 
+ DELIMITER // 
+   create function func3(grup varchar(10)) returns float
+   begin
+   set @stip = (select sum(Stipendiya) from student where Gruppa = grup);
+   RETURN @stip;
+   end
+   DELIMITER ;
+
+4
+
+DELIMITER // 
+   create function func4(kollg varchar(50)) returns int
+   begin
+   set @amount_stud = (select COUNT(student.fio)  from student join s_kolleges on student.Kod_uz = s_kolleges.Kod_uz where s_kolleges.Name_Kollege = kollg);
+   return @amount_stud;
+   end //
+   DELIMITER ;
+   
