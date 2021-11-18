@@ -1,0 +1,28 @@
+﻿<Window x:Class="Laxanta19.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Laxanta19"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="700">
+    <Grid Background="#FF3D3D3D">
+        <Grid Height="400" Margin="157,10,0,0" Width="379" Background="#FF578BB6" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Label x:Name="label1" Content="Авторизация" Margin="239,34,229.6,0" RenderTransformOrigin="0.512,0.484" FontSize="36" Background="{x:Null}" Foreground="Black" FontFamily="Cambria Math" FontWeight="Bold" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Логин:" Margin="204,106,368.6,291" FontSize="18" FontWeight="Bold" FontFamily="Cambria Math">
+            <Label.Background>
+                <ImageBrush/>
+            </Label.Background>
+        </Label>
+        <TextBox x:Name="name" HorizontalAlignment="Left" Height="23" Margin="362,106,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="136" FontSize="14"/>
+        <Button x:Name="button1" Content="Выход" HorizontalAlignment="Left" Margin="312,368,0,0" Width="77" Click="Button_Click" Height="27" VerticalAlignment="Top" ClickMode="Press" Background="#FF3A5EF6" FontWeight="Bold" FontSize="14" BorderBrush="Black"/>
+        <Label x:Name="label3" Content="Пароль:" Margin="204,190,368.6,207" FontSize="18" RenderTransformOrigin="0.7,0.38" FontWeight="Bold" FontFamily="Cambria Math">
+            <Label.Background>
+                <ImageBrush/>
+            </Label.Background>
+        </Label>
+        <TextBox x:Name="passwords" HorizontalAlignment="Left" Height="23" Margin="362,190,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="136" FontSize="14"/>
+        <Button x:Name="button2" Content="Регистрация" HorizontalAlignment="Left" Margin="381,263,0,0" VerticalAlignment="Top" Width="117" Background="#FF682C76" Click="button2_Click" FontSize="14" FontWeight="Bold" Height="28" BorderBrush="Black"/>
+        <Button x:Name="button3" Content="Вход" HorizontalAlignment="Left" Margin="204,263,0,0" VerticalAlignment="Top" Width="117" RenderTransformOrigin="0.5,0.5" Click="Button_Click_1" FontSize="14" FontWeight="Bold" Height="28" Background="#FF682C76" BorderBrush="Black"/>
+    </Grid>
+</Window>
